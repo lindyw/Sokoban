@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sokoban - Woon Him WONG</title>
+	<meta name="description" content="Hangman Game">
+	<meta name="author" content="Woon Him Wong">
+
+	<link rel="stylesheet" type='text/css' href="css/sokoban.css">
+	<script data-require="jquery@3.0.0" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+	<script  type="text/javascript" src="scripts/levels.js"></script>
+	<script  type="text/javascript" src="scripts/sokoban.js" defer></script>
+</head>
+<body onload="init()">
+<div id="title-header"><h1 tabindex="0">Sokoban</h1></div>
+<div id="mainGame">
+			<!--------- Instructions-------->
+			<div class="instructions">
+				<h2 tabindex="1">Welcome!</h2>
+				<p tabindex="2">This version of Sokoban is programmed by Woon Him WONG from IDM in 2018. <br>
+				The goal of the game is to move all box on the screen to their designated checkpoints.</p>
+
+				<h2 tabindex="3">Instructions</h2>
+				<p tabindex="4">Use the arrow keys on the keyboard to move the player around the grid map. <br>
+				The next level will be loaded when all box is placed on checkpoints.</p>
+
+				<p tabindex="5">If you get stuck, click the Reset Level button on the right to restart the level.</p>
+			</div>
+		<!------------ Game Board -------->
+		
+		<audio id="walk" autoplay></audio>
+		<audio id="push" autoplay></audio>
+		<audio id="win" autoplay></audio>
+		<div id="main-game-box">
+			<h3 id="level-text" tabindex="6">Level 1</h3>
+			<table id="gameBoard"></table>
+			<h3 id="msg" tabindex="7">Congratulations! You Won!</h3>
+			<button class="next-level" onclick="nextLevel()" tabindex="8">Next Level</button>
+		</div>
+		<div class="gameInfo">
+			<!--<h2>Level:</h2>-->
+				<!--<select id="level" tabindex="2" onchange="selectLevel(this)">-->
+					<!--<option value="1" tabindex="3">Level 01</option>-->
+					<!--<option value="2" tabindex="3">Level 02</option>-->
+				<!--</select>-->
+			<!--<button id="start-game" onclick="setGameBoard()" tabindex="0">Start Game</button>-->
+			<h2>Steps Taken: <span id="steps-taken" tabindex="9">0</span></h2>
+			<h2>Box Pushes: <span id="box-pushes" tabindex="10">0</span></h2>
+			<button id="reset-level" onclick="setGameBoard()" tabindex="11">Reset Level</button>
+			<button id="skip-level" onclick="nextLevel()" tabindex="12">Skip Level</button>
+			<button id="reset-game" onclick="resetGame()" tabindex="13">Reset Game</button>
+		</div>
+</div>
+<!-- End of mainGame -->
+
+<footer>
+	<a href="https://gitlab.com/users/lindy.w/projects" target="_blank" tabindex="4">
+		<img height="80" src="resources/gitlab.jpeg" alt="gitlab project code and sources" tabindex="4">
+	</a>
+	<div id="copyright" tabindex="4">Woon &copy; 2018</div>
+</footer>
+</body>
+</html>

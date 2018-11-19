@@ -1,0 +1,228 @@
+body 
+{
+	display:fixed;
+	background-color:#276EB6;
+	color:white;
+}
+
+body, header, h1, footer, button, img, div, select, option {
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+
+header {
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 0px;
+	width:80%;
+	height:100px;
+	border-radius: 6px;
+	text-align: center;
+}
+
+header > h1 {
+	padding-top: 20px;
+	font-weight: bold;
+	font-size: 60px;
+}
+
+#title-header
+{
+    font-family: 'Raleway', sans-serif;
+	text-align: center;
+    margin: 20px 0 0 0;
+    width:100%;
+    font-size:30px;
+    align-content: center;
+}
+
+#mainGame
+{
+	font-family: 'Raleway', sans-serif;
+	width:90%;
+	height:50%;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	text-align: center;
+}
+
+#mainGame h2
+{
+	font-size:40px;
+	font-weight: bold;
+	padding-left: 20px;
+	margin-bottom: 10px;
+}
+
+#mainGame p
+{
+	padding:0px 20px;
+	font-size:20px;
+}
+
+.instructions
+{
+	display:table-cell;
+	width : 21%;
+	overflow:hidden;
+	max-width: 100%;
+	margin: 0 0 0 15px;
+	border-radius: 6px;
+	background-color: rgba(255,125,25,0.7);
+}
+
+.instructions p
+{
+	text-align: justify;
+	line-height: 1.5;
+}
+
+.instructions header
+{
+	text-align: left;
+}
+
+.gameInfo
+{
+	display:table-cell;
+	/*width : calc(50% - 250px);*/
+	width:21%;
+	overflow:hidden;
+	background-color: rgba(51,204,51,0.7);
+	border-radius: 6px;
+}
+
+.gameInfo h2
+{
+	padding:10px;
+	font-size:20px;
+}
+
+#reset-level, #skip-level, #start-game, .next-level, #reset-game
+{
+	  cursor: pointer;
+	  box-sizing: border-box;
+	  margin: 20px 35px;
+	  width: 50%;
+	  height: 70px;
+	  background-color: #FF8784;
+	  border: 2px dashed #ffffff;
+	  border-radius: 6px;
+	  font-size: 24px;
+	  font-weight: bold;
+}
+
+
+#reset-level:hover, #skip-level:hover, .next-level:hover, #start-game:hover, #reset-game:hover {
+  background-color: #6CDB7F;
+}
+
+#reset-level:focus, #skip-level:focus, .next-level:focus, #start-game:focus, #reset-game:focus{
+  outline: none;
+}
+
+#msg, .next-level {
+	margin-top: 0px;
+}
+
+#msg
+{
+	display: none;
+}
+
+.next-level
+{
+	display:none;
+	align-content:center;
+}
+
+/*select */
+/*{*/
+	/*margin: 10px;*/
+	/*height: 35px;*/
+	/*width: 100px;*/
+	/*font-size: 18px;*/
+	/*text-align-last:center;*/
+	/*border: 2px solid red;*/
+/*}*/
+
+#main-game-box
+{
+	margin:0px 10px 0px 10px;
+	width:55%;
+	border-radius: 6px;
+	background-color:rgba(177, 177, 177,50%);
+	text-align: center;
+}
+
+#main-game-box h3 {
+  font-size: 36px;
+}
+
+
+#mainGame, #gameBoard
+{
+
+	position: relative;
+	margin:20px auto;
+	clear:left;
+	text-align: center;
+	align-content: center;
+}
+
+/* In-game elements*/
+
+.Wall
+{
+	background-image: url("../resources/wall.jpg");
+}
+
+.Floor
+{
+	background-image: url("../resources/floor.jpg");
+}
+
+td
+{
+	display: inline-block;
+	margin-bottom: -2px;
+	background-size: 51px 51px;
+	width: 50px;
+	height: 50px; 
+}
+
+.Goal
+{
+	background-image: url("../resources/toilet.jpg");
+}
+.Goal#Box
+{
+	background-image: url("../resources/toilet_o.jpg");
+}
+
+#Player
+{
+	content: url("../resources/player-down.png");
+}
+
+#Box
+{
+	content: url("../resources/shit.png");
+}
+
+footer {
+  margin: 20px auto;
+  width: 90%;
+  border-radius: 6px;
+  background-color: #FFFFCC;
+  text-align: center;
+  color: dimgray;
+}
+
+footer img {
+  padding: 20px 0 0 0;
+}
+
+
