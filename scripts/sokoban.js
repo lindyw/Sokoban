@@ -11,23 +11,8 @@ var totalTasks; // how many targets contains in the current level
 
 function init()
 { 
-	// // Update pull-down menu (level selection)
-	// var select = $('#level')[0]; // DOM
-	// $('#level').empty(); // Jquery object clear
-	// select.options.length = LEVELS.length; // read how many levels in database
-	//
-	// for (var i=0;i<select.options.length;i++) // update no. of levels on pull-down menu
-	// {
-	// 	var levelName = "Level 0" + (i+1).toString();
-	// 	select.options[i] = new Option(levelName, i+1);
-	// }
 	setGameBoard();
 }
-//
-// function selectLevel(sel)
-// {
-// 	currLevel = sel.value - 1;
-// }
 
 /* Create a new GameBoard Matrix with 2D array */
 function setGameBoard()
@@ -87,14 +72,9 @@ function drawBoard()
 
 function drawPlayerBoxes()
 {
-	/* Player */
 	// Draw player on initialized position (HTML)
 	var playerCellClass = ".x" + currPlayerPos.i + "y" + currPlayerPos.j;
 	$(playerCellClass).attr('id', 'Player');
-	// // update current POS
-	// currPlayerPos.i = playerStartPos.x;
-	// currPlayerPos.j = playerStartPos.y;
-
 	/* Boxes */
 	for (var i in boxesArr)
 	{
@@ -111,7 +91,6 @@ function setControl()
 	  	{
 	   		 return; // Do nothing if the event was already processed
 	  	}
-
 	  	switch (event.key) 
 	  	{
 		    case "ArrowDown":
@@ -162,7 +141,6 @@ function move(direction)
 		// if the target destination is a box
 		if ($(targetCellClass).attr('id') == "Box")
 		{
-			console.log("pushing");
 			if (push(direction, x, y) == false) // Push the box
 			{
 				movePlayer = false;
@@ -182,8 +160,7 @@ function move(direction)
 			changePlayerImage(direction);
 			// update player image according to the walking direction
 			updatePlayerPos(x,y);
-		}
-		
+		}	
 	}		
 }
 
@@ -228,7 +205,7 @@ function push(direction,x,y)
 	console.log("current: " + currentCellClass);
 
 	// If box is pushed out from the target tile,
-	if (gameBoard[x][y] == G && currentDone > 0)
+	if (gameBoard[x][y] == G && gameBoard[newX][newY] != W && currentDone > 0)
 	{
 		currentDone -= 1;
 	}
@@ -258,11 +235,15 @@ function push(direction,x,y)
 
 function checkEndGame()
 {
+	console.log(currentDone + " / " + totalTasks);
 	if (currentDone == totalTasks)
 	{
 		// WIN : Complete level
 		$("#msg").css("display","inline-block");
-		$(".next-level").css("display", "inline-block");
+		if (currLevel < LEVELS.length-1)
+		{
+			$(".next-level").css("display", "inline-block");
+		}
 	}
 }
 

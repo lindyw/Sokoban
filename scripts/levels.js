@@ -37,9 +37,7 @@ const LEVELS =
              [x, W, G, F, B, W, F, W],
              [x, W, F, F, F, F, F, W],
              [x, W, W, W, W, W, W, W]
-        ],
-        // player: {x:1, y:1},
-        // box:[{x:3, y:4}, {x:3, y:5}, {x:5, y:4}]
+        ]
     },
 
     {
@@ -56,15 +54,11 @@ const LEVELS =
              [x, W, F, F, F, P, F, F, F, F, W, x],
              [x, W, W, W, W, W, W, W, W, W, W, x]
 
-        ],
-        // player: {x:4, y:3},
-        // box:[{x:2, y:6}, {x:3, y:4}, {x:3, y:6}, {x:4, y:2 }, {x:4, y:4}, {x:5, y:2 }, {x:5, y:3}, {x:5, y:4}, {x:6, y:3}]
+        ]
     }
 
 
 
 ];
-
-console.log(LEVELS.length);
 
 

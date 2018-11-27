@@ -27,7 +27,6 @@
 				<p tabindex="5">If you get stuck, click the Reset Level button on the right to restart the level.</p>
 			</div>
 		<!------------ Game Board -------->
-		
 		<audio id="walk" autoplay></audio>
 		<audio id="push" autoplay></audio>
 		<audio id="win" autoplay></audio>
@@ -38,12 +37,6 @@
 			<button class="next-level" onclick="nextLevel()" tabindex="8">Next Level</button>
 		</div>
 		<div class="gameInfo">
-			<!--<h2>Level:</h2>-->
-				<!--<select id="level" tabindex="2" onchange="selectLevel(this)">-->
-					<!--<option value="1" tabindex="3">Level 01</option>-->
-					<!--<option value="2" tabindex="3">Level 02</option>-->
-				<!--</select>-->
-			<!--<button id="start-game" onclick="setGameBoard()" tabindex="0">Start Game</button>-->
 			<h2>Steps Taken: <span id="steps-taken" tabindex="9">0</span></h2>
 			<h2>Box Pushes: <span id="box-pushes" tabindex="10">0</span></h2>
 			<button id="reset-level" onclick="setGameBoard()" tabindex="11">Reset Level</button>
