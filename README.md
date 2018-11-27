@@ -2,6 +2,7 @@
 
 Sokoban HTML\Javascript\CSS 
 2018 practice demo IDM
+by Woon Him WONG, Lindy
 
 Here's a preview:
 
